@@ -1,0 +1,35 @@
+<section class="dc__page">
+	<div class="ui grid container">
+		<div class="row">
+			<div class="column">
+				{{partial 'partials/input-instructions'}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="column">
+				<div class="ui input">
+				<form {{action "drawCanvas" on="submit"}}>
+				    {{input 
+				    	type="text" 
+				    	value=consoleInput 
+				    	placeholder='Enter your command..'}}
+				</form>
+				</div>
+			</div>
+		</div>
+		<ul>
+		{{#each canvasModel.errors as |error|}}
+			<li> {{error.message.firstObject}} </li>
+		{{/each}}
+		</ul>
+		<div class="row">
+			<div class="column">
+				<div class="dc-canvas">
+				  	<canvas id='dc-canvas' tabindex="1" role="img" aria-label="drawing shape">
+						{{FALLBACK_MESSAGE}}
+					</canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

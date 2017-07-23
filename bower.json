@@ -1,0 +1,6 @@
+{
+  "name": "drawing-app",
+  "dependencies": {
+    "semantic-ui": "^2.2.11"
+  }
+}
