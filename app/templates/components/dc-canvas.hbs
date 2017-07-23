@@ -5,14 +5,28 @@
 				{{partial 'partials/input-instructions'}}
 			</div>
 		</div>
+
 		<div class="row">
-			<div class="column">
-				<div class="ui input {{if  canvasModel.hasErrors 'error' ''}}">
+			<div class="column eight wide">
+				<div class="ui info message">
+					To run the command press enter key OR click on Draw button.
+				</div>
+				<div class="ui big form">
 					<form {{action "drawCanvas" on="submit"}}>
-					    {{input 
-					    	type="text" 
-					    	value=consoleInput 
-					    	placeholder='Enter your command..'}}
+						<div class="fields">
+							<div class="ten wide  field {{if  canvasModel.hasErrors 'error' ''}}">
+							    {{input 
+							    	type="text" 
+							    	value=consoleInput 
+							    	placeholder='Enter your command..'
+							    	id="canvasInput"}}
+							</div>
+							<div class="four wide field">
+							    <button class="ui primary button big">
+								  Draw
+								</button>
+							</div>
+						</div>
 					</form>
 				</div>
 			</div>
