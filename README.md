@@ -18,6 +18,7 @@ You will need the following things properly installed on your computer.
 * `git clone <repository-url>` this repository
 * `cd drawing-app`
 * `npm install`
+* `bower install`
 * `node setup.js`
 
 ## Running / Development
