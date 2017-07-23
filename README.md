@@ -16,7 +16,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd drawing-app`
+* `cd dc-canvas-master`
 * `npm install`
 * `bower install`
 * `node setup.js`
