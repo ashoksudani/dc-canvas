@@ -12,7 +12,7 @@
 					To run the command press enter key OR click on Draw button.
 				</div>
 				<div class="ui big form">
-					<form {{action "drawCanvas" on="submit"}}>
+					<form {{action "drawCanvas" on="submit"}} id="canvasForm">
 						<div class="fields">
 							<div class="ten wide  field {{if  canvasModel.hasErrors 'error' ''}}">
 							    {{input 
@@ -21,7 +21,7 @@
 							    	placeholder='Enter your command..'
 							    	id="canvasInput"}}
 							</div>
-							<div class="four wide field">
+							<div class="four wide field" id="canvasDraw">
 							    <button class="ui primary button big">
 								  Draw
 								</button>
