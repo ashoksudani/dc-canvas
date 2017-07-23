@@ -7,21 +7,31 @@
 		</div>
 		<div class="row">
 			<div class="column">
-				<div class="ui input">
-				<form {{action "drawCanvas" on="submit"}}>
-				    {{input 
-				    	type="text" 
-				    	value=consoleInput 
-				    	placeholder='Enter your command..'}}
-				</form>
+				<div class="ui input {{if  canvasModel.hasErrors 'error' ''}}">
+					<form {{action "drawCanvas" on="submit"}}>
+					    {{input 
+					    	type="text" 
+					    	value=consoleInput 
+					    	placeholder='Enter your command..'}}
+					</form>
 				</div>
 			</div>
 		</div>
-		<ul>
-		{{#each canvasModel.errors as |error|}}
-			<li> {{error.message.firstObject}} </li>
-		{{/each}}
-		</ul>
+
+		<div class="row">
+			<div class="column">
+				{{#if  canvasModel.hasErrors}}
+					<div class="ui warning message">
+					 	<ul class="list">
+							{{#each canvasModel.errors as |error|}}
+								<li> {{error.message.firstObject}} </li>
+							{{/each}}
+						</ul>
+					</div>
+				{{/if}}
+			</div>
+		</div>
+		
 		<div class="row">
 			<div class="column">
 				<div class="dc-canvas">

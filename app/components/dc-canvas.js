@@ -22,8 +22,10 @@ export default Ember.Component.extend(DcDrawCanvas, {
 		}, 500);
 	})),
 	resetCanvasInputState() {
-		this.set('consoleInput', '');
-		this.get('canvasModel').clearErrors();
+		if(!this.isDestroyed) {
+			this.set('consoleInput', '');
+			this.get('canvasModel').clearErrors();
+		}
 	},
 	actions: {
 		drawCanvas() {

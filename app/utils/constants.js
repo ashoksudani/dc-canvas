@@ -22,7 +22,7 @@ export default {
 		PARAM3: {
 			'L': 'x2',
 			'R': 'x2',
-			'B': 'color'
+			'B': 'Color'
 		},
 		PARAM4: {
 			'L': 'y2',
